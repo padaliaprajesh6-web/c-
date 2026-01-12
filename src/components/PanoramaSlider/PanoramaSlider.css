@@ -1,0 +1,64 @@
+.panorama-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.panorama-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 20px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.nav:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.left {
+  left: 30px;
+}
+
+.right {
+  right: 30px;
+}
+
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 1.6rem;
+  }
+}
